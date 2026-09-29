@@ -19,6 +19,19 @@ from backend.security.zero_trust_pep import zero_trust_pep, check_agent_permissi
 from backend.security.output_validator import output_validator
 from backend.security.audit_logger import log_event
 
+AGENT_POLICY_NAMES = {
+    "dimension_navigator": "Dimension Navigator",
+    "cube_operations":     "Cube Operations",
+    "kpi_calculator":      "KPI Calculator",
+    "report_generator":    "Report Generator",
+    "visualization":       "Visualization Agent",
+    "anomaly_detection":   "Anomaly Detection",
+}
+
+# Agjentët që aksesojnë DB-në (Report Generator dhe Visualization nuk e aksesojnë)
+DB_AGENTS = {"dimension_navigator", "cube_operations",
+             "kpi_calculator", "anomaly_detection"}
+
 
 class ZeroTrustPlanner:
     """
@@ -190,10 +203,17 @@ RULES:
                 continue
 
             # ── Least Privilege: Kontrollo aksesin DB të agjentit ─────────────
-            agent_display_name = agent.__class__.__name__.replace("Agent", "").strip()
-            db_check = check_agent_permission(
-                agent_display_name, "database", "read", self.username
-            )
+            if agent_key in DB_AGENTS:
+                agent_display_name = AGENT_POLICY_NAMES.get(agent_key, agent_key)
+                db_check = check_agent_permission(
+                    agent_display_name, "database", "read", self.username
+                )
+                if not db_check.allowed:
+                    results["agent_results"][agent_key] = {
+                        "error": f"Zero Trust Denied: {db_check.reason}",
+                        "zero_trust_blocked": True,
+                    }
+                    continue
 
             try:
                 if agent_key == "report_generator":

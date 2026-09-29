@@ -136,12 +136,12 @@ ROLE_POLICIES = {
 # ── Politikat per Agjentë (Least Privilege) ──────────────────────────────────
 AGENT_POLICIES = {
     "Planner": {
-        "can_access_agents": ["Dimension Navigator", "Cube Operations",
-                               "KPI Calculator", "Report Generator",
-                               "Visualization Agent", "Anomaly Detection"],
-        "can_access_db": False,     # Planner nuk akseson DB direkt
-        "can_modify_data": False,
-    },
+    "can_access_agents": ["coordination", "Dimension Navigator", "Cube Operations",
+                           "KPI Calculator", "Report Generator",
+                           "Visualization Agent", "Anomaly Detection"],
+    "can_access_db": False,
+    "can_modify_data": False,
+},
     "Dimension Navigator": {
         "can_access_agents": [],    # Agjentët nuk thërrasin njëri-tjetrin direkt
         "can_access_db": True,
