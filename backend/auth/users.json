@@ -1,0 +1,26 @@
+{
+  "admin": {
+    "password_hash": "ff44a283bc63ac12901b88feb6afba16a9c6055bf100d0eff01f5164af4f09e4",
+    "role": "admin",
+    "email": "admin@olap-platform.com",
+    "created_at": "2026-08-01T12:55:14.476378",
+    "full_name": "Administrator",
+    "2fa_enabled": false
+  },
+  "analyst1": {
+    "password_hash": "27e12cb82983fc5b3f55b4f03a7ac3fe509ca023cd21d04e58560041feb25575",
+    "role": "analyst",
+    "email": "analyst1@olap-platform.com",
+    "created_at": "2026-08-01T12:55:14.476526",
+    "full_name": "Ana Analyst",
+    "2fa_enabled": false
+  },
+  "andreinadraci": {
+    "password_hash": "8bdc610fb30ddd617ecbe4fd150b1c34f90aaef529acda565fcb8164911c808e",
+    "role": "viewer",
+    "email": "inadraci@gmail.com",
+    "created_at": "2026-08-01T12:57:37.506791",
+    "full_name": "andreina",
+    "2fa_enabled": false
+  }
+}
