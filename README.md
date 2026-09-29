@@ -1,4 +1,7 @@
+
 # BI LLM Security Platform
+=======
+59c04efb41bd6cd90a8fb0846e4674f59a3bd0fd
 
 An OLAP business-intelligence platform driven by LLM agents, with a zero-trust security layer around every query and response. Users ask questions in natural language; agents plan the analysis, run cube operations, calculate KPIs and build reports, while a policy engine validates each step.
 
