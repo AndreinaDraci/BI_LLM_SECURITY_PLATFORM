@@ -1,9 +1,9 @@
 
 # BI LLM Security Platform
-=======
 
 An OLAP business-intelligence platform driven by LLM agents, with a zero-trust security layer around every query and response. Users ask questions in natural language; agents plan the analysis, run cube operations, calculate KPIs and build reports, while a policy engine validates each step.
 
+Live demo: https://bi-llm-security-platform.streamlit.app/
 ## Features
 
 - **LLM agents** for planning, cube operations, dimension navigation, KPI calculation, anomaly detection, report generation and visualization
@@ -100,6 +100,4 @@ streamlit run frontend/app.py
 
 Python, Streamlit, FastAPI, Anthropic API
 
-## License
 
-Add your license here.
