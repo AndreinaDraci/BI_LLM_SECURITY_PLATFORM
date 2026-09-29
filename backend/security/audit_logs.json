@@ -1418,5 +1418,125 @@
     "sql": null,
     "success": true,
     "risk_level": "LOW"
+  },
+  {
+    "id": 143,
+    "timestamp": "2026-09-29T23:53:12.890685",
+    "username": "admin",
+    "event_type": "LOGIN",
+    "details": "Login i suksessh\u00ebm \u2014 Role: admin",
+    "sql": null,
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 144,
+    "timestamp": "2026-09-29T23:53:33.080650",
+    "username": "admin",
+    "event_type": "ZERO_TRUST_ALLOW",
+    "details": "PEP: ALLOW \u2014 Zero Trust: 'admin' lejohet p\u00ebr 'Action.EXECUTE' mbi 'Resource.QUERY_OLAP'",
+    "sql": "Break down Q4 sales by region, then drill into the top performer by month",
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 145,
+    "timestamp": "2026-09-29T23:53:33.119212",
+    "username": "admin",
+    "event_type": "AGENT_ACCESS",
+    "details": "Agent 'Planner' \u2192 'agent:coordination' [execute]: ALLOW \u2014 Zero Trust: 'Planner' lejohet \u2014 Least Privilege OK",
+    "sql": null,
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 146,
+    "timestamp": "2026-09-29T23:53:35.628169",
+    "username": "admin",
+    "event_type": "ZERO_TRUST_ALLOW",
+    "details": "PEP: ALLOW \u2014 Zero Trust: 'admin' lejohet p\u00ebr 'Action.EXECUTE' mbi 'Resource.AGENT_CUBE_OPS'",
+    "sql": "Break down Q4 sales by region, then drill into the top performer by month",
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 147,
+    "timestamp": "2026-09-29T23:53:35.665172",
+    "username": "admin",
+    "event_type": "AGENT_ACCESS",
+    "details": "Agent 'Cube Operations' \u2192 'database' [read]: ALLOW \u2014 Zero Trust: 'Cube Operations' lejohet \u2014 Least Privilege OK",
+    "sql": null,
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 148,
+    "timestamp": "2026-09-29T23:53:38.600463",
+    "username": "admin",
+    "event_type": "ZERO_TRUST_ALLOW",
+    "details": "PEP: ALLOW \u2014 Zero Trust: 'admin' lejohet p\u00ebr 'Action.EXECUTE' mbi 'Resource.AGENT_DIM_NAV'",
+    "sql": "Break down Q4 sales by region, then drill into the top performer by month",
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 149,
+    "timestamp": "2026-09-29T23:53:38.643704",
+    "username": "admin",
+    "event_type": "AGENT_ACCESS",
+    "details": "Agent 'Dimension Navigator' \u2192 'database' [read]: ALLOW \u2014 Zero Trust: 'Dimension Navigator' lejohet \u2014 Least Privilege OK",
+    "sql": null,
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 150,
+    "timestamp": "2026-09-29T23:53:41.728862",
+    "username": "admin",
+    "event_type": "ZERO_TRUST_ALLOW",
+    "details": "PEP: ALLOW \u2014 Zero Trust: 'admin' lejohet p\u00ebr 'Action.EXECUTE' mbi 'Resource.AGENT_KPI'",
+    "sql": "Break down Q4 sales by region, then drill into the top performer by month",
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 151,
+    "timestamp": "2026-09-29T23:53:41.773879",
+    "username": "admin",
+    "event_type": "AGENT_ACCESS",
+    "details": "Agent 'KPI Calculator' \u2192 'database' [read]: ALLOW \u2014 Zero Trust: 'KPI Calculator' lejohet \u2014 Least Privilege OK",
+    "sql": null,
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 152,
+    "timestamp": "2026-09-29T23:53:45.086956",
+    "username": "admin",
+    "event_type": "ZERO_TRUST_ALLOW",
+    "details": "PEP: ALLOW \u2014 Zero Trust: 'admin' lejohet p\u00ebr 'Action.EXECUTE' mbi 'Resource.AGENT_VIZ'",
+    "sql": "Break down Q4 sales by region, then drill into the top performer by month",
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 153,
+    "timestamp": "2026-09-29T23:53:46.620473",
+    "username": "admin",
+    "event_type": "ZERO_TRUST_ALLOW",
+    "details": "PEP: ALLOW \u2014 Zero Trust: 'admin' lejohet p\u00ebr 'Action.EXECUTE' mbi 'Resource.AGENT_REPORT'",
+    "sql": "Break down Q4 sales by region, then drill into the top performer by month",
+    "success": true,
+    "risk_level": "LOW"
+  },
+  {
+    "id": 154,
+    "timestamp": "2026-09-29T23:53:50.467807",
+    "username": "admin",
+    "event_type": "QUERY",
+    "details": "Zero Trust Query OK \u2014 17.41s \u2014 Agjent\u00eb: ['cube_operations', 'dimension_navigator', 'kpi_calculator', 'visualization', 'report_generator']",
+    "sql": null,
+    "success": true,
+    "risk_level": "LOW"
   }
 ]
